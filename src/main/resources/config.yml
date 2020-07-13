@@ -20,6 +20,13 @@ message:
   general:
     notplayer: 'You are not a player'
     nopermissions: 'You have no right to do this'
+  help:
+    - '&8[&6V&eRolePlay&8]'
+    - '/try <action> - an action that may or may not be performed successfully'
+    - '/me <message> - a message from a third party'
+    - '/do <action> - this command is intended for describing the events of the game world in the present time'
+    - '/b <message> - OOC-chat'
+    - '/mask - enables/disables mask'
 
 # The range of the visible messages
 range: 5
