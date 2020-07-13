@@ -11,8 +11,8 @@ import org.bukkit.entity.Player;
 
 public class MeCommand implements CommandExecutor {
     private final Configuration configuration = VRoleplay.getConfiguration();
-    private final String rawMessage = configuration.getString("commands.message.me");
-    private final String errorMessage = configuration.getString("commands.general.error");
+    private final String rawMessage = configuration.getString("message.commands.me");
+    private final String errorMessage = configuration.getString("message.general.error");
     private final int range = configuration.getInt("range");
 
     @Override

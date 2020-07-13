@@ -12,10 +12,10 @@ import org.bukkit.entity.Player;
 
 public class TryCommand implements CommandExecutor {
     private final Configuration configuration = VRoleplay.getConfiguration();
-    private final String rawMessage = configuration.getString("commands.message.try");
-    private final String success = configuration.getString("commands.message.try.success");
-    private final String fail = configuration.getString("commands.message.try.fail");
-    private final String errorMessage = configuration.getString("commands.general.error");
+    private final String rawMessage = configuration.getString("message.commands.try");
+    private final String success = configuration.getString("message.commands.try.success");
+    private final String fail = configuration.getString("message.commands.try.fail");
+    private final String errorMessage = configuration.getString("message.general.error");
     private final int range = configuration.getInt("range");
 
     @Override
