@@ -1,5 +1,6 @@
 package me.vahelce.vroleplay;
 
+import org.bukkit.ChatColor;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -21,7 +22,10 @@ public class Configuration {
             final Set<String> keys = yamlConfiguration.getKeys(true);
             if (keys.size() > 0) {
                 for (final String key : keys) {
-                    config.put(key, yamlConfiguration.get(key));
+                    Object common = yamlConfiguration.get(key);
+                    if (common instanceof String)
+                        common = ChatColor.translateAlternateColorCodes('&', String.valueOf(common));
+                    config.put(key, common);
                 }
             }
         } catch (Exception e) {
