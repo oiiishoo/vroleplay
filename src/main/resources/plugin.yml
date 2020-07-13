@@ -8,9 +8,13 @@ permissions:
     description: "Allow to use /try command"
   vroleplay.me:
     description: "Allow to use /me command"
+  vroleplay.do:
+    description: "Allow to use /do command"
 
 commands:
   try:
     permission: "vroleplay.try"
   me:
     permission: "vroleplay.me"
+  do:
+    permission: "vroleplay.do"
