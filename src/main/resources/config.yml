@@ -7,16 +7,16 @@
 # Appearance of chat messages
 message:
   commands:
-    try: '&e{player} &7{action} &7({result}&7)'
+    try: '&e%player% &7%action% &7(%result%&7)'
       success: '&aSuccess'
       fail: '&cFail'
-    me: '&7{player} &8{message}'
-    do: '&7*{action}* ({player}) '
+    me: '&7%player% &8%message%'
+    do: '&7*%action%* (%player%) '
     mask:
       name: '&eUnknown&r'
       activate: '&eMask enabled'
       deactivate: '&6Mask disabled'
-    ooc: '&7{message} ((&8{player}&7))'
+    ooc: '&7%message% ((&8%player%&7))'
   general:
     notplayer: 'You are not a player'
     nopermissions: 'You have no right to do this'
