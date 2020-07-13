@@ -15,6 +15,7 @@ public class TryCommand implements CommandExecutor {
     private final String rawMessage = configuration.getString("commands.message.try");
     private final String success = configuration.getString("commands.message.try.success");
     private final String fail = configuration.getString("commands.message.try.fail");
+    private final String errorMessage = configuration.getString("commands.general.error");
     private final int range = configuration.getInt("range");
 
     @Override
@@ -22,15 +23,19 @@ public class TryCommand implements CommandExecutor {
         if (sender instanceof Player) {
             Player player = (Player)sender;
             if (player.hasPermission("vroleplay.try")) {
-                String result = RandomHelper.getRandom(1) == 0 ? success : fail;
-                String message = rawMessage
-                        .replaceFirst("%player%", player.getName())
-                        .replaceFirst("%message%", StringUtils.concatMessage(args))
-                        .replaceFirst("%result%", result);
-                for (Player p: LocationUtils.getPlayersAt(player.getLocation(), range)) {
-                    p.sendMessage(message);
+                if (args.length > 0) {
+                    String result = RandomHelper.getRandom(1) == 0 ? success : fail;
+                    String message = rawMessage
+                            .replaceFirst("%player%", player.getName())
+                            .replaceFirst("%action%", StringUtils.concatMessage(args))
+                            .replaceFirst("%result%", result);
+                    for (Player p : LocationUtils.getPlayersAt(player.getLocation(), range)) {
+                        p.sendMessage(message);
+                    }
+                    return true;
                 }
-                return true;
+                player.sendMessage(errorMessage);
+                return false;
             }
             sender.sendMessage(configuration.getString("message.general.nopermissions"));
             return false;
