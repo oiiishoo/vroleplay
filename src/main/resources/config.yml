@@ -20,6 +20,7 @@ message:
   general:
     notplayer: 'You are not a player'
     nopermissions: 'You have no right to do this'
+    error: 'An error occurred when using the command. Use /vroleplay help for help.'
   help:
     - '&8[&6V&eRolePlay&8]'
     - '/try <action> - an action that may or may not be performed successfully'
