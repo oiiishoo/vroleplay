@@ -6,7 +6,11 @@ author: 'vahelce'
 permissions:
   vroleplay.try:
     description: "Allow to use /try command"
+  vroleplay.me:
+    description: "Allow to use /me command"
 
 commands:
   try:
     permission: "vroleplay.try"
+  me:
+    permission: "vroleplay.me"
