@@ -1,0 +1,24 @@
+name: 'VRolePlay'
+main: 'me.vahelce.vroleplay.VRoleplay'
+version: '1.0-SNAPSHOT'
+author: 'vahelce'
+
+permissions:
+  vroleplay.try:
+    description: "Allow to use /try command"
+  vroleplay.me:
+    description: "Allow to use /me command"
+  vroleplay.do:
+    description: "Allow to use /do command"
+  vroleplay.ooc:
+    description: "Allow to use OOC chat"
+
+commands:
+  try:
+    permission: "vroleplay.try"
+  me:
+    permission: "vroleplay.me"
+  do:
+    permission: "vroleplay.do"
+  b:
+   permission: "vroleplay.ooc"
