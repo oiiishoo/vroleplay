@@ -15,7 +15,10 @@ public class VRoleplay extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        configuration = new Configuration(getDataFolder() + File.separator + "config.yml", this);
+        String filePath = getDataFolder() + File.separator + "config.yml";
+        if (!new File(filePath).exists())
+            saveResource("config.yml", true);
+        configuration = new Configuration(filePath, this);
         registerCommands();
         registerListeners();
     }
