@@ -12,7 +12,8 @@ public class LocationUtils {
     public static List<Player> getPlayersAt(Location location, int range) {
         return Bukkit.getOnlinePlayers()
                 .parallelStream()
-                .filter(p -> p.getLocation().distance(location) >= range)
+                .filter(p -> location.getWorld().equals(p.getWorld())
+                        && p.getLocation().distance(location) >= range)
                 .collect(Collectors.toList());
     }
 }
