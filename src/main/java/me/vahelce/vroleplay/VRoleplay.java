@@ -22,21 +22,11 @@ public class VRoleplay extends JavaPlugin {
             saveResource("config.yml", true);
         configuration = new Configuration(filePath, this);
         registerCommands();
-        registerListeners();
-    }
-
-    @Override
-    public void onDisable() {
-
     }
 
     private void registerCommands() {
         getServer().getPluginCommand("try").setExecutor(new TryCommand());
         getServer().getPluginCommand("me").setExecutor(new MeCommand());
-    }
-
-    private void registerListeners() {
-
     }
 
     public static VRoleplay getInstance() {
