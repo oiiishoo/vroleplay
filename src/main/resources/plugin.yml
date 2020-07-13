@@ -2,3 +2,11 @@ name: 'VRolePlay'
 main: 'me.vahelce.vroleplay.VRoleplay'
 version: '1.0-SNAPSHOT'
 author: 'vahelce'
+
+permissions:
+  vroleplay.try:
+    description: "Allow to use /try command"
+
+commands:
+  try:
+    permission: "vroleplay.try"

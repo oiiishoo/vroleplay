@@ -1,5 +1,6 @@
 package me.vahelce.vroleplay;
 
+import me.vahelce.vroleplay.commands.TryCommand;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.io.File;
@@ -29,7 +30,7 @@ public class VRoleplay extends JavaPlugin {
     }
 
     private void registerCommands() {
-
+        getServer().getPluginCommand("try").setExecutor(new TryCommand());
     }
 
     private void registerListeners() {
