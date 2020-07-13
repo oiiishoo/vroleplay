@@ -1,12 +1,9 @@
 package me.vahelce.vroleplay;
 
-import org.bukkit.configuration.InvalidConfigurationException;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import java.io.FileNotFoundException;
 import java.io.FileReader;
-import java.io.IOException;
 import java.io.Reader;
 import java.util.HashMap;
 import java.util.Set;
