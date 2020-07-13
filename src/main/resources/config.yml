@@ -17,7 +17,7 @@ message:
       name: '&eUnknown&r'
       activate: '&eMask enabled'
       deactivate: '&6Mask disabled'
-    ooc: '&7%message% ((&8%player%&7))'
+    ooc: '&7(OOC) &8%player%: &7%message%'
   general:
     notplayer: 'You are not a player'
     nopermissions: 'You have no right to do this'
