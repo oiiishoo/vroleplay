@@ -2,6 +2,7 @@ package me.vahelce.vroleplay;
 
 import me.vahelce.vroleplay.commands.DoCommand;
 import me.vahelce.vroleplay.commands.MeCommand;
+import me.vahelce.vroleplay.commands.OocChatCommand;
 import me.vahelce.vroleplay.commands.TryCommand;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -29,6 +30,7 @@ public class VRoleplay extends JavaPlugin {
         getServer().getPluginCommand("try").setExecutor(new TryCommand());
         getServer().getPluginCommand("me").setExecutor(new MeCommand());
         getServer().getPluginCommand("do").setExecutor(new DoCommand());
+        getServer().getPluginCommand("b").setExecutor(new OocChatCommand());
     }
 
     public static VRoleplay getInstance() {

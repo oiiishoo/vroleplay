@@ -10,6 +10,8 @@ permissions:
     description: "Allow to use /me command"
   vroleplay.do:
     description: "Allow to use /do command"
+  vroleplay.ooc:
+    description: "Allow to use OOC chat"
 
 commands:
   try:
@@ -18,3 +20,5 @@ commands:
     permission: "vroleplay.me"
   do:
     permission: "vroleplay.do"
+  b:
+   permission: "vroleplay.ooc"
