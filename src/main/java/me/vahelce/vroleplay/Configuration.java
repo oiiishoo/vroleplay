@@ -23,9 +23,11 @@ public class Configuration {
             if (keys.size() > 0) {
                 for (final String key : keys) {
                     Object common = yamlConfiguration.get(key);
-                    if (common instanceof String)
-                        common = ChatColor.translateAlternateColorCodes('&', String.valueOf(common));
-                    config.put(key, common);
+                    if (common != null) {
+                        if (common instanceof String)
+                            common = ChatColor.translateAlternateColorCodes('&', String.valueOf(common));
+                        config.put(key, common);
+                    }
                 }
             }
         } catch (Exception e) {
