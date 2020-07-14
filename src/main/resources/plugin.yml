@@ -1,6 +1,6 @@
 name: 'VRolePlay'
 main: 'me.vahelce.vroleplay.VRoleplay'
-version: '1.0-SNAPSHOT'
+version: '2.0-SNAPSHOT'
 author: 'vahelce'
 
 permissions:
@@ -12,6 +12,8 @@ permissions:
     description: "Allow to use /do command"
   vroleplay.ooc:
     description: "Allow to use OOC chat"
+  vrolepaly.mask:
+    description: "Allow to use masks"
 
 commands:
   try:
@@ -22,3 +24,7 @@ commands:
     permission: "vroleplay.do"
   b:
    permission: "vroleplay.ooc"
+  mask:
+    permission: "vroleplay.mask"
+  vroleplay:
+    description: "VRolePlay help"

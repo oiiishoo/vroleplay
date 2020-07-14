@@ -11,8 +11,8 @@ import java.util.Set;
 import java.util.logging.Level;
 
 public class Configuration {
-    private HashMap<String, Object> config = new HashMap<>();
-    private String path;
+    private final HashMap<String, Object> config = new HashMap<>();
+    private final String path;
 
     public Configuration(String path, JavaPlugin plugin) {
         this.path = path;
@@ -23,9 +23,11 @@ public class Configuration {
             if (keys.size() > 0) {
                 for (final String key : keys) {
                     Object common = yamlConfiguration.get(key);
-                    if (common instanceof String)
-                        common = ChatColor.translateAlternateColorCodes('&', String.valueOf(common));
-                    config.put(key, common);
+                    if (common != null) {
+                        if (common instanceof String)
+                            common = ChatColor.translateAlternateColorCodes('&', String.valueOf(common));
+                        config.put(key, common);
+                    }
                 }
             }
         } catch (Exception e) {
