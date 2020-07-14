@@ -24,6 +24,7 @@ public class VRoleplay extends JavaPlugin {
             saveResource("config.yml", true);
         configuration = new Configuration(filePath, this);
         registerCommands();
+        getServer().getPluginManager().registerEvents(new ChatListener(), this);
     }
 
     private void registerCommands() {
