@@ -11,8 +11,8 @@ import java.util.Set;
 import java.util.logging.Level;
 
 public class Configuration {
-    private HashMap<String, Object> config = new HashMap<>();
-    private String path;
+    private final HashMap<String, Object> config = new HashMap<>();
+    private final String path;
 
     public Configuration(String path, JavaPlugin plugin) {
         this.path = path;
