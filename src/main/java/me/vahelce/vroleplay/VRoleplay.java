@@ -1,9 +1,6 @@
 package me.vahelce.vroleplay;
 
-import me.vahelce.vroleplay.commands.DoCommand;
-import me.vahelce.vroleplay.commands.MeCommand;
-import me.vahelce.vroleplay.commands.OocChatCommand;
-import me.vahelce.vroleplay.commands.TryCommand;
+import me.vahelce.vroleplay.commands.*;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.io.File;
@@ -32,6 +29,7 @@ public class VRoleplay extends JavaPlugin {
         getServer().getPluginCommand("me").setExecutor(new MeCommand());
         getServer().getPluginCommand("do").setExecutor(new DoCommand());
         getServer().getPluginCommand("b").setExecutor(new OocChatCommand());
+        getServer().getPluginCommand("mask").setExecutor(new MaskCommand());
     }
 
     public static VRoleplay getInstance() {
