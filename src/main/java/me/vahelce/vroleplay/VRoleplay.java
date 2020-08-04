@@ -40,7 +40,7 @@ public class VRoleplay extends JavaPlugin implements CommandExecutor {
         getServer().getPluginCommand("me").setExecutor(new MeCommand());
         getServer().getPluginCommand("do").setExecutor(new DoCommand());
         getServer().getPluginCommand("b").setExecutor(new OocChatCommand());
-        getServer().getPluginCommand("mask").setExecutor(new MaskCommand());
+        getServer().getPluginCommand("rpmask").setExecutor(new MaskCommand());
         getServer().getPluginCommand("vroleplay").setExecutor(this);
     }
 

@@ -24,7 +24,7 @@ commands:
     permission: "vroleplay.do"
   b:
    permission: "vroleplay.ooc"
-  mask:
+  rpmask:
     permission: "vroleplay.mask"
   vroleplay:
     description: "VRolePlay help"
