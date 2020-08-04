@@ -1,6 +1,7 @@
 package me.vahelce.vroleplay;
 
 import me.vahelce.vroleplay.commands.*;
+import org.bstats.bukkit.Metrics;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -14,6 +15,7 @@ public class VRoleplay extends JavaPlugin implements CommandExecutor {
     private static VRoleplay instance;
     private static Configuration configuration;
     private static String[] helpMessages;
+    private static final int pluginId = 8418;
 
     @Override
     public void onLoad() {
@@ -22,6 +24,7 @@ public class VRoleplay extends JavaPlugin implements CommandExecutor {
 
     @Override
     public void onEnable() {
+        Metrics metrics = new Metrics(this, pluginId);
         String filePath = getDataFolder() + File.separator + "config.yml";
         if (!new File(filePath).exists())
             saveResource("config.yml", true);
