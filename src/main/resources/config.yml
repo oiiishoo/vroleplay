@@ -18,6 +18,9 @@ message:
       activate: '&eMask enabled'
       deactivate: '&6Mask disabled'
     ooc: '&7(OOC) &8%player%: &7%message%'
+    todo:
+      message: '&7%message% - said %player%, %action%'
+      error: "&cIncorrect use of the command. That\'s right: /todo message*action"
   general:
     notplayer: 'You are not a player'
     nopermissions: 'You have no right to do this'

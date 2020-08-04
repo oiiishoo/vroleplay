@@ -14,8 +14,12 @@ permissions:
     description: "Allow to use OOC chat"
   vrolepaly.mask:
     description: "Allow to use masks"
+  vroleplay.todo:
+    description: "Allow to use /todo"
 
 commands:
+  todo:
+    permission: "vroleplay.todo"
   try:
     permission: "vroleplay.try"
   me:
